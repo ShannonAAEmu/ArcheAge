@@ -1,5 +1,6 @@
+----------------------------------------------------------------------
 CARequestAuthPacket
-
+----------------------------------------------------------------------
 int __thiscall CARequestAuthPacket_Structure(char *this, int *a2)
 {
   char *v2; // esi
@@ -44,9 +45,10 @@ int __thiscall CARequestAuthPacket_Structure(char *this, int *a2)
   v9("mac2", v2 + 101, 8);
   return (*(*a2 + 56))("cpu", v2 + 112, 0);
 }
+
 ----------------------------------------------------------------------
 CARequestAuthNewPacket
-
+----------------------------------------------------------------------
 int __thiscall CARequestAuth_New_1_Structure(char *this, int *a2)
 {
   char *v2; // esi
@@ -91,9 +93,10 @@ int __thiscall CARequestAuth_New_1_Structure(char *this, int *a2)
   v9("mac2", v2 + 2074, 8);
   return (*(*a2 + 56))("cpu", v2 + 2088, 0);
 }
+
 ----------------------------------------------------------------------
 CARequestAuthTencentPacket
-
+----------------------------------------------------------------------
 int __thiscall CARequestAuthTencentPacket_Structure(char *this, int *a2)
 {
   char *v2; // esi
@@ -151,9 +154,10 @@ int __thiscall CARequestAuthTencentPacket_Structure(char *this, int *a2)
     result = (*(v13 + 220))("netbarSig", v17, 128);
   return result;
 }
+
 ----------------------------------------------------------------------
 CARequestAuthGameOnPacket
-
+----------------------------------------------------------------------
 int __thiscall CARequestAuthGameOnPacket_Structure(char *this, int *a2)
 {
   char *v2; // esi
@@ -201,9 +205,10 @@ int __thiscall CARequestAuthGameOnPacket_Structure(char *this, int *a2)
   }
   return result;
 }
+
 ----------------------------------------------------------------------
 CARequestAuthNew2Packet
-
+----------------------------------------------------------------------
 int __thiscall CARequestAuth_New_2_Structure(char *this, int *a2)
 {
   char *v2; // esi
@@ -247,9 +252,10 @@ int __thiscall CARequestAuth_New_2_Structure(char *this, int *a2)
   }
   return (*(*a2 + 120))("isLast", v2 + 2202, 0);
 }
+
 ----------------------------------------------------------------------
 CARequestAuthMailRuPacket
-
+----------------------------------------------------------------------
 int __thiscall CARequestAuthMailRuPacket_Structure(char *this, int *a2)
 {
   char *v2; // esi
@@ -297,9 +303,10 @@ int __thiscall CARequestAuthMailRuPacket_Structure(char *this, int *a2)
     result = (*(v8 + 224))("tkn", v14, 32);
   return result;
 }
+
 ----------------------------------------------------------------------
 CAChallengeResponsePacket
-
+----------------------------------------------------------------------
 int __thiscall CAChallengeResponsePacket_Structure(char *this, int *a2)
 {
   char *v2; // ebx
@@ -334,9 +341,10 @@ int __thiscall CAChallengeResponsePacket_Structure(char *this, int *a2)
     result = (*(v7 + 220))(&aPw, v11, 32);
   return result;
 }
+
 ----------------------------------------------------------------------
 CAChallengeResponse2Packet
-
+----------------------------------------------------------------------
 int __thiscall CAChallengeResponse2Packet_Structure(char *this, int a2)
 {
   int v2; // esi
@@ -354,9 +362,10 @@ int __thiscall CAChallengeResponse2Packet_Structure(char *this, int a2)
   while ( v3 );
   return result;
 }
+
 ----------------------------------------------------------------------
 ClientToAuthPacket = ClientToAuth2Packet
-
+----------------------------------------------------------------------
 int __thiscall ClientToAuthPacket_Structure(_DWORD *this, int a2)
 {
   _DWORD *v2; // esi
@@ -377,16 +386,18 @@ int __thiscall ClientToAuthPacket_Structure(_DWORD *this, int a2)
   }
   return result;
 }
+
 ----------------------------------------------------------------------
 CAListWorldPacket
-
+----------------------------------------------------------------------
 int __thiscall CAListWorldPacket_Structure(void *this, int a2)
 {
   return (*(*a2 + 56))("flag", this + 8, 0);
 }
+
 ----------------------------------------------------------------------
 CAEnterWorldPacket
-
+----------------------------------------------------------------------
 int __thiscall ClientToAuthPacket_Structure(_DWORD *this, int a2)
 {
   _DWORD *v2; // esi
@@ -407,16 +418,18 @@ int __thiscall ClientToAuthPacket_Structure(_DWORD *this, int a2)
   }
   return result;
 }
+
 ----------------------------------------------------------------------
 CACancelEnterWorldPacket
-
+----------------------------------------------------------------------
 int __thiscall CACancelEnterWorldPacket_Structure(void *this, int a2)
 {
   return (*(*a2 + 68))("wid", this + 8, 0);
 }
+
 ----------------------------------------------------------------------
 CARequestReconnectPacket
-
+----------------------------------------------------------------------
 int __thiscall CARequestReconnectPacket_Structure(char *this, int *a2)
 {
   char *v2; // esi
@@ -443,9 +456,10 @@ int __thiscall CARequestReconnectPacket_Structure(char *this, int *a2)
     result = (*(v4 + 224))("mac", v8, 8);
   return result;
 }
+
 ----------------------------------------------------------------------
 ACJoinResponsePacket
-
+----------------------------------------------------------------------
 int __thiscall ACJoinResponsePacket_Structure(_DWORD *this, int a2)
 {
   _DWORD *v2; // esi
@@ -466,9 +480,10 @@ int __thiscall ACJoinResponsePacket_Structure(_DWORD *this, int a2)
   }
   return (*(*a2 + 56))("afs", v2 + 4, 0);
 }
+
 ----------------------------------------------------------------------
 ACChallengePacket
-
+----------------------------------------------------------------------
 int __thiscall ACChallengePacket_Structure(char *this, int a2)
 {
   char *v2; // esi
@@ -489,9 +504,10 @@ int __thiscall ACChallengePacket_Structure(char *this, int a2)
   while ( v4 );
   return result;
 }
+
 ----------------------------------------------------------------------
 ACAuthResponsePacket
-
+----------------------------------------------------------------------
 int __thiscall ACAuthResponsePacket_Structure(void *this, int a2)
 {
   int v2; // edi
@@ -510,9 +526,10 @@ int __thiscall ACAuthResponsePacket_Structure(void *this, int a2)
   }
   return (*(*a2 + 68))("slotCount", v2 + 49, 0);
 }
+
 ----------------------------------------------------------------------
 ACChallenge2Packet
-
+----------------------------------------------------------------------
 int __thiscall ACChallenge2Packet_Structure(char *this, int a2)
 {
   char *v2; // edi
@@ -543,9 +560,10 @@ int __thiscall ACChallenge2Packet_Structure(char *this, int a2)
   while ( v5 );
   return result;
 }
+
 ----------------------------------------------------------------------
 ACEnterOtpPacket
-
+----------------------------------------------------------------------
 int __thiscall ACEnterOtpPacket_Structure(void *this, int a2)
 {
   int v2; // esi
@@ -554,9 +572,10 @@ int __thiscall ACEnterOtpPacket_Structure(void *this, int a2)
   (*(*a2 + 76))("mt", this + 8, 0);
   return (*(*a2 + 76))("ct", v2 + 12, 0);
 }
+
 ----------------------------------------------------------------------
 ACShowArsPacket
-
+----------------------------------------------------------------------
 int __thiscall ACShowArsPacket_Structure(char *this, int a2)
 {
   char *v2; // edi
@@ -576,9 +595,10 @@ int __thiscall ACShowArsPacket_Structure(char *this, int a2)
   }
   return (*(*a2 + 60))("timeout", v2 + 20, 0);
 }
+
 ----------------------------------------------------------------------
 ACEnterPcCertPacket
-
+----------------------------------------------------------------------
 int __thiscall ACEnterPcCertPacket_Structure(void *this, int a2)
 {
   int v2; // esi
@@ -587,9 +607,10 @@ int __thiscall ACEnterPcCertPacket_Structure(void *this, int a2)
   (*(*a2 + 76))("mt", this + 8, 0);
   return (*(*a2 + 76))("ct", v2 + 12, 0);
 }
+
 ----------------------------------------------------------------------
 ACWorldListPacket
-
+----------------------------------------------------------------------
 int *__thiscall ACWorldListPacket_Structure(char *this, int a2)
 {
   char *v2; // esi
@@ -642,9 +663,10 @@ int *__thiscall ACWorldListPacket_Structure(char *this, int a2)
   }
   return result;
 }
+
 ----------------------------------------------------------------------
 ACWorldQueuePacket
-
+----------------------------------------------------------------------
 int __thiscall ACWorldQueuePacket_Structure(void *this, int a2)
 {
   int v2; // esi
@@ -656,9 +678,10 @@ int __thiscall ACWorldQueuePacket_Structure(void *this, int a2)
   (*(*a2 + 64))("normalLength", v2 + 12, 0);
   return (*(*a2 + 64))("premiumLength", v2 + 14, 0);
 }
+
 ----------------------------------------------------------------------
 ACWorldCookiePacket
-
+----------------------------------------------------------------------
 int __thiscall ACWorldCookiePacket_Structure(char *this, int a2)
 {
   char *v2; // esi
@@ -683,9 +706,10 @@ int __thiscall ACWorldCookiePacket_Structure(char *this, int a2)
   while ( v5 );
   return result;
 }
+
 ----------------------------------------------------------------------
 ACEnterWorldDeniedPacket
-
+----------------------------------------------------------------------
 int __thiscall ACEnterWorldDeniedPacket_Structure(void *this, int a2)
 {
   void *v2; // esi
@@ -706,9 +730,10 @@ int __thiscall ACEnterWorldDeniedPacket_Structure(void *this, int a2)
   }
   return result;
 }
+
 ----------------------------------------------------------------------
 ACLoginDeniedPacket
-
+----------------------------------------------------------------------
 int __thiscall ACLoginDeniedPacket_Structure(char *this, int a2)
 {
   char *v2; // esi
@@ -743,9 +768,10 @@ int __thiscall ACLoginDeniedPacket_Structure(char *this, int a2)
   }
   return result;
 }
+
 ----------------------------------------------------------------------
 ACAccountWarnedPacket
-
+----------------------------------------------------------------------
 int __thiscall ACAccountWarnedPacket_Structure(char *this, int a2)
 {
   char *v2; // esi
