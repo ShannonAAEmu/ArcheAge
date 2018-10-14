@@ -1,0 +1,17 @@
+[c]00 00 CTJoinPacket
+[c]00 02 CTRequestCellPacket
+[c]00 03 CTRequestEmblemPacket
+[c]00 04 CTCancelCellPacket
+[c]00 05 CTContinuePacket
+[c]00 06 CTUccComplexPacket
+[c]00 07 CTUccStringPacket
+[c]00 08 CTUccPositionPacket
+[c]00 09 CTUccCharacterNamePacket
+[c]00 10 CTItemUccPacket
+[c]00 11 CTEmblemPartDownloadedPacket
+[c]00 12 CTUccComplexCheckValidPacket
+[c]00 0A CTQueryCharNamePacket
+[c]00 0C CTUploadEmblemStreamPacket
+[c]00 0D CTEmblemStreamUploadStatusPacket
+[c]00 0E CTStartUploadEmblemStreamPacket
+[c]00 0F CTEmblemStreamDownloadStatusPacket
