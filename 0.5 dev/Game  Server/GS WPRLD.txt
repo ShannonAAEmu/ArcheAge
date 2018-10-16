@@ -1,3 +1,4 @@
+---Only client packets---
 [c]01 00 01 CSLeaveWorldPacket
 [c]01 00 02 CSCancelLeaveWorldPacket
 [c]01 00 04 CSCreateExpeditionPacket
