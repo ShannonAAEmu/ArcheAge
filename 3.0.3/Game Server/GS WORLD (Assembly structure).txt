@@ -1,0 +1,421 @@
+--------------------------------------------
+SCReconnectAuthPacket
+--------------------------------------------
+int __thiscall SCReconnectAuthPacket_St(void *this, struc_2 *a2)
+{
+  return (*(a2->Reader + offsetof(struc_2, ReadInt32)))("cookie", this + 12, 0);
+}
+
+--------------------------------------------
+SCPrepareLeaveWorldPacket
+--------------------------------------------
+int __thiscall SCPrepareLeaveWorldPacket_St(void *this, struc_2 *a2)
+{
+  void *v2; // esi
+  int v4; // [esp+0h] [ebp-8h]
+  unsigned __int8 v5; // [esp+7h] [ebp-1h]
+
+  v2 = this;
+  (*(a2->Reader + offsetof(struc_2, ReadUInt32)))("time", this + 12, 0, v4);
+  if ( (*(a2->Reader + 28))() )
+  {
+    (*(a2->Reader + offsetof(struc_2, ReadByte)))("target", &v5);
+    *(v2 + 4) = v5;
+  }
+  else
+  {
+    v5 = *(v2 + 16);
+    (*(a2->Reader + offsetof(struc_2, ReadByte)))("target", &v5);
+  }
+  return (*(a2->Reader + offsetof(struc_2, ReadBool)))("idleKick", v2 + 20, 0);
+}
+
+--------------------------------------------
+SCLeaveWorldGrantedPacket
+--------------------------------------------
+int __thiscall SCLeaveWorldGrantedPacket_St(void *this, struc_2 *a2)
+{
+  void *v2; // esi
+  int result; // eax
+  int v4; // [esp+0h] [ebp-8h]
+  unsigned __int8 v5; // [esp+7h] [ebp-1h]
+
+  v2 = this;
+  if ( (*(a2->Reader + 28))(v4) )
+  {
+    result = (*(a2->Reader + offsetof(struc_2, ReadByte)))("target", &v5);
+    *(v2 + 3) = v5;
+  }
+  else
+  {
+    v5 = *(v2 + 12);
+    result = (*(a2->Reader + offsetof(struc_2, ReadByte)))("target", &v5);
+  }
+  return result;
+}
+
+--------------------------------------------
+SCLeaveWorldCanceledPacket
+--------------------------------------------
+
+--------------------------------------------
+SCWorldQueuePacket
+--------------------------------------------
+int __thiscall SCWorldQueuePacket_St(void *this, struc_2 *a2)
+{
+  void *v2; // esi
+
+  v2 = this;
+  (*(a2->Reader + offsetof(struc_2, ReadByte)))("worldId", this + 12, 0);
+  (*(a2->Reader + offsetof(struc_2, ReadByte)))("userGrade", v2 + 13, 0);
+  (*(a2->Reader + offsetof(struc_2, ReadUInt16)))("myTurn", v2 + 14, 0);
+  (*(a2->Reader + offsetof(struc_2, ReadUInt16)))("normalLength", v2 + 16, 0);
+  (*(a2->Reader + offsetof(struc_2, ReadUInt16)))("premiumLength", v2 + 18, 0);
+  return (*(a2->Reader + offsetof(struc_2, ReadUInt32)))("dummyWaitTime", v2 + 20, 0);
+}
+
+--------------------------------------------
+SCInitialConfigPacket
+--------------------------------------------
+int __userpurge SCInitialConfigPacket_St@<eax>(int a1@<ecx>, int a2@<ebx>, struc_2 *a3)
+{
+  int v3; // esi
+  int v4; // edi
+  int v5; // eax
+  char v6; // al
+  int v7; // edx
+  void (__thiscall *v8)(struc_2 *); // eax
+  struc_2 *v9; // edi
+  int result; // eax
+  int v11; // [esp+0h] [ebp-Ch]
+  int v12; // [esp+4h] [ebp-8h]
+  int v13; // [esp+8h] [ebp-4h]
+
+  v3 = a1;
+  v4 = a1 + 12;
+  if ( (*(a3->Reader + 28))() )
+  {
+    *((*(a3->Reader + 220))("host", v3 + 12, 259) + v4) = 0;
+  }
+  else
+  {
+    v5 = XlStringSize((v3 + 12));
+    (*(a3->Reader + 224))("host", v3 + 12, v5);
+  }
+  v6 = (*(a3->Reader + 28))(a2, v11, v12, v13);
+  v7 = a3->Reader;
+  v13 = 26;
+  if ( v6 )
+    v8 = *(v7 + 220);
+  else
+    v8 = *(v7 + 224);
+  v8(a3);
+  sub_399284B0(a3);
+  sub_39928A10(a3);
+  (*(a3->Reader + offsetof(struc_2, ReadByte)))("secondPasswordMaxFailCount", v3 + 716, 0);
+  (*(a3->Reader + offsetof(struc_2, ReadUInt32)))("idleKickTime", v3 + 720, 0);
+  v9 = a3;
+  (*(a3->Reader + offsetof(struc_2, ReadBool)))("enable", v3 + 724, 0);
+  (*(v9->Reader + offsetof(struc_2, ReadBool)))(v9, "pcbang", v3 + 725, 0);
+  (*(v9->Reader + offsetof(struc_2, ReadBool)))(v9, "premium", v3 + 726, 0);
+  (*(v9->Reader + offsetof(struc_2, ReadByte)))(v9, "maxCh", v3 + 727, 0);
+  (*(a3->Reader + offsetof(struc_2, ReadUInt16)))("honorPointDuringWarPercent", v3 + 728, 0);
+  (*(a3->Reader + offsetof(struc_2, ReadByte)))("uccVer", v3 + 730, 0);
+  if ( (*(a3->Reader + 28))() )
+  {
+    result = (*(a3->Reader + offsetof(struc_2, ReadByte)))("memberType", &v13 + 3);
+    *(v3 + 732) = HIBYTE(v13);
+  }
+  else
+  {
+    HIBYTE(v13) = *(v3 + 732);
+    result = (*(a3->Reader + offsetof(struc_2, ReadByte)))("memberType", &v13 + 3);
+  }
+  return result;
+}
+
+--------------------------------------------
+SCInitialConfig2Packet
+--------------------------------------------
+int __thiscall SCInitialConfig2Packet_St(char *this, int a1)
+{
+  return sub_39928510(this + 12, a1);
+}
+----------------------
+int __thiscall sub_39928510(char *this, int a2)
+{
+  char *v2; // edi
+  int v3; // eax
+  int v4; // eax
+  int v5; // eax
+  int v6; // eax
+  int result; // eax
+
+  v2 = this;
+  (*(*a2 + offsetof(struc_2, ReadBool)))("activate", this, 0);
+  if ( (*(*a2 + 28))() )
+  {
+    v2[(*(*a2 + 220))("platformURL", v2 + 1, 259) + 1] = 0;
+  }
+  else
+  {
+    v3 = XlStringSize(v2 + 1);
+    (*(*a2 + 224))("platformURL", v2 + 1, v3);
+  }
+  if ( (*(*a2 + 28))() )
+  {
+    v2[(*(*a2 + 220))("commerceURL", v2 + 261, 259) + 261] = 0;
+  }
+  else
+  {
+    v4 = XlStringSize(v2 + 261);
+    (*(*a2 + 224))("commerceURL", v2 + 261, v4);
+  }
+  if ( (*(*a2 + 28))() )
+  {
+    v2[(*(*a2 + 220))("wikiURL", v2 + 521, 259) + 521] = 0;
+  }
+  else
+  {
+    v5 = XlStringSize(v2 + 521);
+    (*(*a2 + 224))("wikiURL", v2 + 521, v5);
+  }
+  if ( (*(*a2 + 28))() )
+  {
+    result = (*(*a2 + 220))("csURL", v2 + 781, 259);
+    v2[result + 781] = 0;
+  }
+  else
+  {
+    v6 = XlStringSize(v2 + 781);
+    result = (*(*a2 + 224))("csURL", v2 + 781, v6);
+  }
+  return result;
+}
+
+--------------------------------------------
+SCCharacterRenamePacket
+--------------------------------------------
+int __thiscall SCCharacterRenamePacket_St(const char *this, struc_2 *a2)
+{
+  const char *v2; // esi
+  int v3; // eax
+  int result; // eax
+
+  v2 = this + 12;
+  if ( (*(a2->Reader + 28))() )
+  {
+    result = (*(a2->Reader + 220))("changeName", v2, 256);
+    v2[result] = 0;
+  }
+  else
+  {
+    v3 = XlStringSize(v2);
+    result = (*(a2->Reader + 224))("changeName", v2, v3);
+  }
+  return result;
+}
+
+--------------------------------------------
+DeleteCharacterResponsePacket
+--------------------------------------------
+int __thiscall DeleteCharacterResponsePacket_St(void *this, struc_2 *a2)
+{
+  void *v2; // esi
+
+  v2 = this;
+  (*(a2->Reader + offsetof(struc_2, ReadUInt32)))("type", this + 12, 0);
+  (*(a2->Reader + offsetof(struc_2, ReadByte)))("deleteStatus", v2 + 16, 0);
+  (*(a2->Reader + offsetof(struc_2, ReadUInt64)))("deleteRequestedTime", v2 + 24, 0);
+  return (*(a2->Reader + offsetof(struc_2, ReadUInt64)))("deleteDelay", v2 + 32, 0);
+}
+
+--------------------------------------------
+SCCharacterDeletedPacket
+--------------------------------------------
+int __thiscall SCCharacterDeletedPacket_St(char *this, struc_2 *a2)
+{
+  char *v2; // esi
+  const char *v3; // esi
+  int v4; // eax
+  int result; // eax
+
+  v2 = this;
+  (*(a2->Reader + offsetof(struc_2, ReadUInt32)))("type", this + 12, 0);
+  v3 = v2 + 16;
+  if ( (*(a2->Reader + 28))() )
+  {
+    result = (*(a2->Reader + 220))("name", v3, 128);
+    v3[result] = 0;
+  }
+  else
+  {
+    v4 = XlStringSize(v3);
+    result = (*(a2->Reader + 224))("name", v3, v4);
+  }
+  return result;
+}
+
+--------------------------------------------
+CancelCharacterDeleteResponsePacket
+--------------------------------------------
+int __thiscall CancelCharacterDeleteResponsePacket_St(void *this, struc_2 *a2)
+{
+  void *v2; // esi
+
+  v2 = this;
+  (*(a2->Reader + offsetof(struc_2, ReadUInt32)))("type", this + 12, 0);
+  return (*(a2->Reader + offsetof(struc_2, ReadByte)))("deleteStatus", v2 + 16, 0);
+}
+
+--------------------------------------------
+CharacterCreationFailedPacket
+--------------------------------------------
+int __thiscall CharacterCreationFailedPacket_St(void *this, struc_2 *a2)
+{
+  void *v2; // esi
+  int result; // eax
+  int v4; // [esp+0h] [ebp-8h]
+  unsigned __int8 v5; // [esp+7h] [ebp-1h]
+
+  v2 = this;
+  if ( (*(a2->Reader + 28))(v4) )
+  {
+    result = (*(a2->Reader + offsetof(struc_2, ReadByte)))("reason", &v5);
+    *(v2 + 3) = v5;
+  }
+  else
+  {
+    v5 = *(v2 + 12);
+    result = (*(a2->Reader + offsetof(struc_2, ReadByte)))("reason", &v5);
+  }
+  return result;
+}
+
+--------------------------------------------
+SCAccountInfoPacket
+--------------------------------------------
+int __thiscall SCAccountInfoPacket_St(void *this, struc_2 *a2)
+{
+  void *v2; // esi
+
+  v2 = this;
+  (*(a2->Reader + offsetof(struc_2, ReadInt32)))("payMethod", this + 12, 0);
+  (*(a2->Reader + offsetof(struc_2, ReadInt32)))("payLocation", v2 + 16, 0);
+  (*(a2->Reader + offsetof(struc_2, ReadUInt64)))("payStart", v2 + 24, 0);
+  (*(a2->Reader + offsetof(struc_2, ReadUInt64)))("payEnd", v2 + 32, 0);
+  (*(a2->Reader + offsetof(struc_2, ReadInt64)))("realPayTime", v2 + 40, 0);
+  return (*(a2->Reader + offsetof(struc_2, ReadInt32)))("buyPremiumCount", v2 + 48, 0);
+}
+
+--------------------------------------------
+SCActiveWeaponChangedPacket
+--------------------------------------------
+int __userpurge SCActiveWeaponChangedPacket_St@<eax>(char *this@<ecx>, int edi0@<edi>, struc_2 *a2)
+{
+  char *v3; // esi
+  int result; // eax
+  int v5; // [esp+0h] [ebp-8h]
+  unsigned __int8 v6; // [esp+7h] [ebp-1h]
+
+  v3 = this;
+  sub_399298E0(&a2->Reader, edi0, "unitId", this + 3, 0);
+  if ( (*(a2->Reader + 28))(v5) )
+  {
+    result = (*(a2->Reader + offsetof(struc_2, ReadByte)))("activeWeapon", &v6);
+    *(v3 + 4) = v6;
+  }
+  else
+  {
+    v6 = v3[16];
+    result = (*(a2->Reader + offsetof(struc_2, ReadByte)))("activeWeapon", &v6);
+  }
+  return result;
+}
+
+--------------------------------------------
+CharacterResurrectedPacket
+--------------------------------------------
+int __userpurge CharacterResurrectedPacket_St@<eax>(int a1@<ecx>, int a2@<edi>, struc_2 *a3)
+{
+  int v3; // esi
+
+  v3 = a1;
+  sub_399298E0(&a3->Reader, a2, "unitId", (a1 + 12), 0);
+  sub_39790990((v3 + 16), a3);
+  return (*(a3->Reader + offsetof(struc_2, ReadFloat)))("zRot", v3 + 40, 0);
+}
+
+--------------------------------------------
+UnitDeathPacket
+--------------------------------------------
+int __userpurge UnitDeathPacket_St@<eax>(int a1@<ecx>, int a2@<edi>, struc_2 *a3)
+{
+  int v3; // esi
+  void (__thiscall *v4)(struc_2 *, const char *, unsigned __int8 *); // edx
+  int v6; // [esp+0h] [ebp-Ch]
+  unsigned __int8 v7; // [esp+Bh] [ebp-1h]
+
+  v3 = a1;
+  sub_399298E0(&a3->Reader, a2, "uid", (a1 + 12), 0);
+  if ( (*(a3->Reader + 28))(v6) )
+  {
+    (*(a3->Reader + offsetof(struc_2, ReadByte)))(a3, "killReason", &v7);
+    *(v3 + 16) = v7;
+  }
+  else
+  {
+    v4 = *(a3->Reader + offsetof(struc_2, ReadByte));
+    v7 = *(v3 + 16);
+    v4(a3, "killReason", &v7);
+  }
+  sub_39A7C690(a3);
+  return sub_39A7C840(a3);
+}
+
+--------------------------------------------
+TimeOfDayPacket
+--------------------------------------------
+int __thiscall TimeOfDayPacket_St(void *this, struc_2 *a2)
+{
+  return (*(a2->Reader + offsetof(struc_2, ReadFloat)))("time", this + 12, 0);
+}
+
+--------------------------------------------
+DetailedTimeOfDayPacket
+--------------------------------------------
+int __thiscall DetailedTimeOfDayPacket_St(void *this, struc_2 *a2)
+{
+  void *v2; // esi
+
+  v2 = this;
+  (*(a2->Reader + offsetof(struc_2, ReadFloat)))("time", this + 12, 0);
+  (*(a2->Reader + offsetof(struc_2, ReadFloat)))("speed", v2 + 16, 0);
+  (*(a2->Reader + offsetof(struc_2, ReadFloat)))("start", v2 + 20, 0);
+  return (*(a2->Reader + offsetof(struc_2, ReadFloat)))("end", v2 + 24, 0);
+}
+
+--------------------------------------------
+SCForceAttackSetPacket
+--------------------------------------------
+int __thiscall SCForceAttackSetPacket_St(_DWORD *this, struc_2 *a2)
+{
+  _DWORD *v2; // ebx
+  _DWORD *v3; // edi
+  bool v4; // zf
+  int v5; // eax
+  void (__thiscall *v6)(struc_2 *, void *, _DWORD *, signed int); // edx
+
+  v2 = this;
+  v3 = this + 3;
+  if ( (*(a2->Reader + 28))() )
+    *v3 = 0;
+  v4 = (*(a2->Reader + 28))(a2) == 0;
+  v5 = a2->Reader;
+  if ( v4 )
+    v6 = *(v5 + 208);
+  else
+    v6 = *(v5 + 204);
+  v6(a2, &aBc, v2 + 3, 3);
+  return (*(a2->Reader + offsetof(struc_2, ReadBool)))("on", v2 + 4, 0);
+}
