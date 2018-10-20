@@ -3,24 +3,198 @@
 0x1E2 SCLeaveWorldGrantedPacket
 0x249 SCLeaveWorldCanceledPacket
 0x113 SCWorldQueuePacket
-0x21  SCInitialConfigPacket
+0x44  SCInitialConfigPacket
 0x2C3 SCInitialConfig2Packet
-
+0x1F6 FactionListPacket
+0x244 FactionRelationListPacket
+0x188 
+0x63  SCExpeditionRolePolicyListPacket
+0x12B SCExpeditionRolePolicyChangedPacket
+0x26F SCExpeditionRoleChangedPacket
+0x25A SCExpeditionOwnerChangedPacket
+0x1DD SCExpeditionShowRenameUIPacket
+0x3A  
+0x193 SCFactionRenamedPacket
+0x2A  SCFactionRetryRenamePacket
+0x19A SCFactionRetryRename2Packet
+0x1CF SCFactionCreatedPacket
+0x1B6 SCExpeditionSponsorChangedPacket
+0x120 SCExpeditionDismissedPacket
+0x2D6 
+0xD2  
+0x224 SCExpeditionWarKillScorePacket
+0xD5  
+0x13E 
+0x2B6 
+0x104 
+0x206 
+0x14  
+0xB1  SCFactionSetRelationStatePacket
+0x274 SCExpeditionInvitationPacket
+0x21B UnitFactionChangedPacket
+0x22E UnitExpeditionChangedPacket
+0x212 SCExpeditionMemberStatusChangedPacket
+0x112 
+0xF1  
+0x1B1 SCExpeditionOwnerChanged2Packet
+0x2C1 
+0x297 
+0x219 SCExpeditionAddExpPacket
+0x24C SCExpeditionMemberCountPacket
+0x1D1 
+0x140 
+0xC2  
+0x28D 
+0x12D 
+0x22D 
+0x286 
+0x147 
+0x20  
+0x44  SCFamilyRemovedPacket
+0x26C SCFamilyInvitationPacket
+0xC6  SCFamilyPacket
+0x12F SCFamilyMemberRemovedPacket
+0x118 SCFamilyOwnerChangedPacket
+0x29E SCFamilyTitleChangedPacket
+0x3C  
+0x98  SCFamilyTitlePacket
+0x69  SCFamilyMemberOnlinePacket
+0x1F4 
+0xF4  
+0x2A8 SCFamilySetContentPacket
+0x87  SCFamilyGetInfoPacket
 0x10E SCCharacterRenamePacket
 0x166 DeleteCharacterResponsePacket
 0x2B8 SCCharacterDeletedPacket
 0x16E CancelCharacterDeleteResponsePacket
 0x169 CharacterCreationFailedPacket
-
-0xEC SCAccountInfoPacket
-
-0x240 SCActiveWeaponChangedPacket
-
+0x14D SCRaceCongestionPacket
+0x3E  SCRaceCongestion2Packet
+0xA9  SCCharacterInvenInitPacket
+0x2C  SCCharacterInvenContentsPacket
+0xDC  
+0x1B9 
 0x261 CharacterResurrectedPacket
-
+0x202 SCForceAttackSetPacket
+0x11F SCCharacterLaborPowerChangedPacket
+0x12A SCAddActionPointPacket
+0x216 SCLpManagedPacket
+0x287 SCExpertLimitModifiedPacket
+0x1DF 
+0xEC  SCAccountInfoPacket
+0xAC  SCDumpCombatInfoPacket
+0x152 SCUccCheckecPacket
+0x27D SCSlaveCreatedPacket
+0x10D SCSlaveRemovedPacket
+0x9D  SCSlaveDespawnPacket
+0x13D SCSlaveBoundPacket
+0x50  SCMySlavePacket
+0xC   
+0xC7  
+0x192 
+0xD3  SCUnitsRemovedPacket
+0x105 SCUnitOfflinePacket
+0x1D6 SCSkillControllerStatePacket
+0x240 SCActiveWeaponChangedPacket
+0x21  SCUnitNameChangedPacket
 0x1C3 UnitDeathPacket
-
+0x101 SCTeleportUnitPacket
+0x1E7 SCBlinkUnitPacket
+0x1CA UnitAttachedPacket
+0xE3  UnitDetachedPacket
+0x18F SCUnitInvisiblePacket
+0xD7  SCUnitFlyingPacket
+0x6C  TargetChangedPacket
+0x5F  SCItemTaskSuccessPacket
+0x2D0 SCUnitEquipmentIdsPacket
+0xD8  
+0x58  SCSyncItemLifespanPacket
+0x35  SCSpecialtyRatioPacket
+0x203 SCSpecialtyGoodsPacket
+0xFF  
+0x23E 
+0x1DC 
+0x89  
+0x67  
+0xE6  
+0x80  SkillStartedPacket (0x16)
+0x1E  SkillFiredPacket (0x264)
+0x135 SkillEndedPacket
+0x163 SkillStoppedPacket
+0x93  SCCastingStoppedPacket
+0x5A  SCCastingDelayedPacket
+0x253 UnitDamagedPacket
+0xAD  UnitHealedPacket
+0xA5  SCBuffStatePacket
+0xC4  SCBuffCreatedPacket
+0x2B4 
+0x26B SCBuffRemovedPacket
+0xA8  SCBuffUpdatedPacket
+0x78  SCUnitPointsPacket
+0x1CE SCCombatEngagedPacket
+0x2B  SCCombatClearedPacket
+0x95  SCCombatFirstHitPacket
+0x2CE SCDumpCombatStatPacket
+0x11C SCDuelChallengedPacket
+0xAF  SCDuelStartCountdownPacket
+0x97  SCDuelStartedPacket
+0x1EB SCDuelEndedPacket
+0x15C SCDuelStatePacket
+0x117 SCHouseBuildProgressPacket
+0x10B SCHousePermissionChangedPacket
+0xC9  SCHouseDemolishedPacket
+0xF0  SCMyHouseRemovedPacket
+0x178 SCHouseFarmPacket
+0x292 SCHousingRecoverTogglePacket
+0x4E  SCGetHouseNamePacket
+0xF5  SCHouseOwnerNameChangedPacket
+0x122 SCHouseNameChangedPacket
+0x2F  
+0x1E4 
+0x175 SCJoinedChatChannelPacket
+0x2B5 SCLeavedChatChannelPacket
+0x838 SCChatMessagePacket -?
+0x82  SCChatLocalizedMessagePacket
+0x11E SCNpcChatMessagePacket
+0xC1  
+0x186 SCNoticeMessagePacket
+0xB   SCChatFailedPacket
+0xCB  SCAskToJoinTeamPacket
+0x280 SCAskToJoinTeamAreaPacket
+0x11A SCRejectedTeamPacket
+0x12  SCLeavedTeamPacket
+0x1BB SCTeamDismissedPacket
+0xBC  SCTeamMemberJoinedPacket
+0x1AA SCTeamMemberLeavedPacket
+0x170 SCTeamOwnerChangedPacket
+0x1D2 SCTeamMemberRoleChangedPacket
+0xFA  SCTeamBecameRaidTeamPacket
+0x27  SCTeamMemberMovedPacket
+0x115 SCRefreshTeamMemberPacket
+0x22A SCTeamRemoteMembersExPacket
+0x3F  SCTeamAreaInvitedPacket
+0x76  SCOverHeadMarkerSetPacket
+0x1E8 
+0x80  SCTeamAckRiskyActionPacket
+0x141 
+0x9C  
+0x19C 
+0x29D SCSiegeReinforcePacket
+0x220 SCSiegeMemberPacket
+0x6F  SCSiegeAlertPacket
+0x15E SCConflictZoneStatePacket
+0x271 SCConflictZoneHonorPointSumPacket
+0x1E3 
 0x214 TimeOfDayPacket
 0x291 DetailedTimeOfDayPacket
-
-0x202 SCForceAttackSetPacket
+0x158 SCNpcInteractionSkillListPacket
+0x20E SCNpcInteractionEndedByZonePacket
+0x4B  SCWorldInteractionSkillListPacket
+0x237 SCWorldInteractionCanceledPacket
+0x257 SCNpcInteractionStatusChangedPacket
+0x243 SCNpcInteractionStatusChanged2Packet
+0x2BB SCNpcFriendshipListPacket
+0x83  SCNpcFriendshipChangedPacket
+0xE0  SCCompletedQuestsPacket
+0xC0  
+0x1D3 SCLootableStatePacket
