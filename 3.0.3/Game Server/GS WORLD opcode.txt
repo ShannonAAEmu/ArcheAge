@@ -198,3 +198,203 @@
 0xE0  SCCompletedQuestsPacket
 0xC0  
 0x1D3 SCLootableStatePacket
+0x23A SCUnitLootingStatePacket
+0xB7  SCLootItemTookPacket
+0x2D9 SCLootItemFailedPacket
+0x18B SCLootDiceSummaryPacket
+0x19F SCExpChangedPacket
+0x275 SCAbilityExpChangedPacket
+0x126 SCRecoverableExpPacket
+0xD   SCMileageChangedPacket
+0x245 SCLevelChangedPacket
+0x176 
+0x1C5 UnitModelPostureChangedPacket
+0x187 SCSkillLearnedPacket
+0x57  SCBuffLearnedPacket
+0xB6  SCSkillsResetPacket
+0x11D SCAbilitySwappedPacket
+0x20F 
+0x189 
+0x2DA 
+0x5B  ErrorMsgPacket
+0x285 DoodadRemovedPacket
+0xBE  DoodadChangedPacket
+0x2B3 SCDoodadPhaseChangedPacket
+0x153 SCDoodadPuzzleScenePacket
+0x1CB SCDoodadQuestAcceptPacket
+0x238 SCDoodadsRemovedPacket
+0x150 SCDoodadOriginatorPacket
+0x111 SCMineAmountPacket
+0x5E  SCMailFailedPacket
+0x258 SCCountUnreadMailPacket
+0x2B7 SCMailSentPacket (0x17C)
+0x143 SCMailListPacket
+0x251 
+0x2C7 SCMailReceiverOpenedPacket
+0x24F SCAttachmentTakenPacket
+0x81  SCMailDeletedPacket
+0x209 SCSpamReportedPacket
+0xF8  SCMailReturnedPacket (0x17E)
+0x26A SCMailStatusUpdatedPacket
+0xF6  SCMailRemovedPacket
+0x17D SCMateSpawnedPacket
+0x05  SCMateFiredPacket
+0x233 SCEmotionExpressedPacket
+0x07  SCActionSlotsPacket
+0x1F  SCAuctionBidPacket
+0x208 
+0x7E  SCUnitTrackedPacket
+0x235 SCBombUpdatedPacket
+0x155 SCCombatTextPacket
+0xA1  SCSkillCooldownResetPacket
+0x71  SCPlotEndedPacket
+0x17C SCPlotProcessingTimePacket
+0x2C5 SCPlotCastingStoppedPacket
+0x28E SCPlotChannelingStoppedPacket
+0xD0  SCEnvDamagePacket
+0x10F 
+0x1D  SCDiceValuePacket
+0x19B SCHungPacket
+0xFE  SCUnhungPacket
+0x205 SCBondDoodadPacket
+0x6A  SCUnbondDoodadPacket
+0x217 SCPlaySequencePacket
+0x4A  SCGimmicksRemovedPacket
+0x168 SCGimmickJointsBrokenPacket
+0x1DB SCGimmickResetJointsPacket
+0x228 SCGimmickGraspedPacket
+0xE2  SCWorldRayCastingResultPacket
+0x100 
+0x1FC SCWorldAimPointPacket
+0x52  SCQuestContextFailedPacket
+0x1FD SCQuestUnitReqFailedPacket
+0x8F  CSQuestAcceptConditionalPacket
+0x250 SCQuestContextCompletedPacket
+0xB8  SCQuestContextResetPacket
+0x239 SCDoodadCompleteQuestPacket
+0x65  SCQuestRewardedByMailPacket
+0x22F SCQuestListPacket
+0x38  SCQuestMailSentPacket
+0x213 SCScheduleItemSentPacket
+0x185 SCGmCommandPacket
+0x2C2 SCGmDumpInventoryPacket
+0x2BE SCGmDumpCompletedQuestsPacket
+0x17E 
+0x2CD SCGmDumpCharPacket
+0x1FE 
+0x2BF 
+0x2AF 
+0x19E SCGmDumpCharParty
+0x15F 
+0x2C9 
+0x123 
+0x247 SCGmUpdateHeroScore
+0x21D 
+0x22C 
+0x1D9 
+0x210 
+0x26D 
+0x18D SCKickedPacket
+0x27A SCAccountWarnedPacket
+0x15B SCWarnedTextPacket
+0x2B9 SCAboxTeleportPacket
+0x236 SCPortalDeletedPacket
+0x277 SCUnitPortalUsedPacket
+0x1BC 
+0x2C8 SCSoundAreaEventPacket
+0x199 SCAreaChatBubblePacket
+0x267 SCChatBubblePacket
+0x294 SCAreaTeamMessagePacket
+0x129 SCDoodadSoundPacket
+0xAB  SCDoodadPhaseMsgPacket
+0x66  
+0x31  SCCooldownsPacket
+0x2DE SCDoodadUccDataPacket
+0xCA  SCUccCharacterNameLoadedPacket
+0x221 SCNaviTeleportPacket
+0x15A SCTradeStartedPacket
+0x107 SCCanStartTradePacket
+0x29F SCCannotStartTradePacket
+0x1B5 SCTradeCanceledPacket
+0xE4  SCTradeItemPutupPacket
+0x2AD SCTradeItemTookdownPacket
+0x106 SCTradeOkUpdatePacket
+0x167 SCTradeLockUpdatePacket
+0x24A SCTowerDefListPacket
+0xB0  SCTowerDefStartPacket
+0x8B  SCTowerDefEndPacket
+0x17A SCTowerDefWaveStartPacket
+0xF7  SCCrimeChangedPacket
+0x1F7 SCCriminalArrestedPacket
+0x254 SCAskImprisonOrTrialPacket
+0x181 SCInviteJuryPacket
+0x1EA SCSummonJuryPacket
+0x160 SCJuryBeSeatedPacket
+0x74  SCSummonDefendantPacket
+0x7B  SCCrimeDataPacket
+0x1A2 SCCrimeRecordsPacket
+0x14C SCTrialInfoPacket
+0x1C  SCChangeTrialStatePacket
+0x10  SCChangeJuryOKCountPacket
+0x124 SCChangeJuryVerdictCountPacket
+0x91  SCTrialWaitStatusPacket
+0x270 SCJuryWaitStatusPacket
+0x296 SCRulingStatusPacket
+0x1F8 SCRulingClosedPacket
+0x32  SCTrialAudienceJoinedPacket
+0x26  SCTrialAudienceLeftPacket
+0x200 SCJuryWaitingNumberPacket
+0xB3  SCTrialCancledPacket
+0x20C SCBotSuspectReportedPacket
+0x28A SCBotSuspectArrestedPacket
+0x01  
+0x2BA SCUnderWaterPacket
+0xEA  SCCharacterGamePointsPacket
+0x164 SCGamePointChangedPacket
+0x20D SCJuryPointChangedPacket
+0x2C4 SCAppliedToInstantGamePacket
+0x6B  SCCancelInstantGamePacket
+0x138 
+0x7F  
+0x2A7 
+0xC3  
+0x119 SCInstantGameStartPacket
+0x1C9 SCInstantGameStart2Packet
+0xD9  
+0x1FF SCInstantGameEndPacket
+0x56  
+0x226 
+0x1C7 SCInstantGameKillstreakPacket
+0x201 SCProcessingInstancePacket
+0x18C 
+0x48  
+0x137 
+0xA4  
+0x04  
+0x259 
+0xCC  SCDelayedTaskOnInGameNotifyPacket
+0x130 SCAppellationsPacket
+0x7C  SCAppellationGainedPacket
+0x218 SCAppellationChangedPacket
+0x234 SCTutorialSavedPacket
+0x1B0 SCEmblemUploadedPacket
+0x1B2 SCEmblemDownloadedPacket
+0x2A4 SCDoodadUccStringPacket
+0x2A6 SCSlaveStatePacket
+0x183 SCMateStatePacket
+0x21C SCFriendsPacket
+0x55  SCSearchListPacket
+0xE9  SCAddFriendPacket
+0x1D5 SCDeleteFriendPacket
+0x1E9 SCFriendStatusChangedPacket
+0x1A6 SCBlockedUsersPacket
+0x27F SCAddBlockedUserPacket
+0x92  SCDeleteBlockedUserPacket
+0x1EE SCCharBriefPacket
+0x2D5 SCPlaytimePacket
+0xAE  SCCharacterRenamed
+0x146 
+0x1AC SCItemUccDataChangedPacket
+0x29A SCShowQuestAreaPacket
+0x133 SCShowCommonFarmPacket
+0x269 SCTelescopeToggledPacket
