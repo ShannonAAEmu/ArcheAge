@@ -398,3 +398,115 @@
 0x29A SCShowQuestAreaPacket
 0x133 SCShowCommonFarmPacket
 0x269 SCTelescopeToggledPacket
+0x298 SCSchoolOfFishFinderToggledPacket
+0x2A9 SCSchoolOfFishFinderToggled2Packet
+0x10C SCDominionDeletedPacket
+0x1A0 SCDominionOwnerChangedPacket
+0x116 SCDominionTaxRatePacket
+0x51  SCNationalTaxRatePacket
+0x61  SCNationalMonumentChangedPacket
+0x13A SCDominionTaxBalancedPacket
+0xBD  
+0x1D7 
+0x2C6 
+0x8A  
+0x108 
+0xFB  
+0x14B 
+0x2D8 SCFactionIndependencePacket
+0x293 SCFactionImmigrateInvitePacket
+0xB4  SCFactionImmigrateInviteResultPacket
+0x77  SCFactionImmigrateToOriginResultPacket
+0x1A  SCFactionKickToOriginResultPacket
+0x1D8 SCFactionDeclareHostileResultPacket
+0x23F SCFactionRelationExpiredPacket
+0x197 
+0x18  
+0xF   
+0xA0  
+0xB2  
+0x125 
+0x16B 
+0xDE  
+0x16D 
+0x24D 
+0x40  
+0x24E 
+0x1E1 
+0x231 SCShowDemoModeUiPacket
+0x13B SCDemoCharResetItemPacket
+0x1A3 SCDemoCharResetLocPacket
+0x131 SCDemoResetActionSlotPacket
+0xCD  SCSetBreathPacket
+0x207 SCAggroTargetChanged
+0x94  SCHackGuradRetAddrsRequestPacket
+0x230 
+0x194 
+0x6E  
+0x47  SCCraftFailedPacket
+0x43  SCUnitLocationPacket
+0x2E  SCRestrictInfo
+0x12E SCIsUnitInFarmPacket
+0x145 SCResponseUIDataPacket
+0x41  SCUnitVisualOptionsPacket
+0x246 SCUnitVisualOptions2Packet
+0x1E6 SCNotifyUIMessagePacket
+0x1DA SCRefreshInCharacterListPacket
+0x177 SCResultRestrictCheck
+0x2C0 SCICSMenuList
+0x2A0 SCICSGoodList
+0x248 SCICSGoodDetail
+0x60  SCICSCheckTime
+0xBB  SCICSBuyResult
+0x16F SCICSSyncGood
+0x204 SCICSCashPoint
+0x25C SCBountyListPacket
+0x22  SCInvitationCanceledPacket
+0x134 SCPlaySoundPacket
+0x2BC SCSendUserMusicPacket
+0x1AE SCUserNoteLoadedPacket
+0x28  SCPauseUserMusicPacket
+0xC5  
+0x24  
+0x272 SCGetSlotCountPacket
+0x1EF SCSecondPassSettedPacket
+0x54  SCSecondPassKeyTablesPacket
+0x283 SCSecondPassCreatedPacket
+0x1AD SCSecondPassChangedPacket
+0x1E0 SCSecondPassCheckedPacket
+0x295 SCSecondPassClearedPacket
+0x5D  SCSecondPassCheckOverFailedPacket
+0x222 SCSecondPassAccountLockedPacket
+0xEB  
+0xF3  SCScheduleItemUpdatePacket
+0x28C SCScheduledEventStartedPacket
+0x15D SCScheduledEventEndedPacket
+0x15  SCMouldListPacket
+0x16C SCMouldAskedPacket
+0x7A  SCMouldTakenPacket
+0x172 SCToggleBeautyshopResponsePacket
+0x11B SCSpecialtyCurrentPacket
+0x59  SCUnitIdleStatusPacket
+0x2B1 SCRaceCondPacket
+0x42  SCRacingPacket
+0x1C0 SCRacingResultPacket
+0xDA  SCRankRewardMailPacket
+0xD6  
+0x260 
+0x255 
+0x266 
+0x20B 
+0x99  
+0x1B8 
+0x45  
+0x184 
+0x20A 
+0x9E  
+0x1B  
+0x2AE SCUpdatePremiumPointPacket
+0xB9  SCPremiumPointChangedPacket
+0xA   SCUnitGmModeChangedPacket
+0x262 SCUnitGmModeChanged2Packet
+0x75  
+0x2AA SCICSExchangeRatio
+0x103 SCPremiumServiceListPacket
