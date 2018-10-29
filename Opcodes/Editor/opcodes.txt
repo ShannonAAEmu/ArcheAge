@@ -1,0 +1,26 @@
+=== Editor to Server ===
+0x01 CELoginPacket
+0x02 CERequestCellLockInfoPacket
+0x03 CERequestLockPacket
+0x04 CERequestMultipleLocksPacket
+0x05 CEIncreaseVersionPacket
+0x06 CERequestCellLockPacket
+0x07 CEPongPacket
+0x08 CEChatPacket
+0xA  CEBatchRequestPacket
+0xC  CEBatchQueryPacket
+0xE  CECommandPacket
+
+=== Server to Editor ===
+0x01 ECLoginResponsePacket
+0x02 ECSubCellLockInfoPacket
+0x03 ECCellLockInfoPacket
+0x04 ECLockResponsePacket
+0x05 ECMultipleLockResponsePacket
+0x06 ECIncreaseVersionResponsePacket
+0x07 ECPingPacket
+0x08 ECChatPacket
+0x10 ECTransactionRevertedPacket
+0xA  ECBatchQueryResultPacket
+0xC  ECBatchRequestResponsePacket
+0xF  ECNoticePacket
