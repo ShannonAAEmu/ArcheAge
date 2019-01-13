@@ -1,0 +1,13 @@
+[s]00 00 ACJoinResponsePacket
+[s]00 02 ACChallengePacket
+[s]00 03 ACAuthResponsePacket
+[s]00 04 ACChallenge2Packet
+[s]00 05 ACEnterOtpPacket
+[s]00 06 ACShowArsPacket
+[s]00 07 ACEnterPcCertPacket
+[s]00 08 ACWorldListPacket
+[s]00 09 ACWorldQueuePacket
+[s]00 0A ACWorldCookiePacket
+[s]00 0B ACEnterWorldDeniedPacket
+[s]00 0C ACLoginDeniedPacket
+[s]00 0D ACAccountWarnedPacket
