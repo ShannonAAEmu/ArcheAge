@@ -1,8 +1,8 @@
 [c]00 01 CARequestAuthPacket
-[c]00 02 CARequestAuthNewPacket   //maybe for Taiwan server
+[c]00 02 CARequestAuthPlayWithPacket
 [c]00 03 CARequestAuthTencentPacket
 [c]00 04 CARequestAuthGameOnPacket
-[c]00 05 CARequestAuthNew2Packet  //maybe for Taiwan server
+[c]00 05 CARequestAuthTrionPacket
 [c]00 06 CARequestAuthMailRuPacket
 [c]00 07 CAChallengeResponsePacket
 [c]00 08 CAChallengeResponse2Packet
